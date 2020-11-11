@@ -1,0 +1,39 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "mocha": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "no-console": 0,
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "prefer-const": ["error", {
+            "destructuring": "any",
+            "ignoreReadBeforeAssign": false
+        }]
+    },
+    "globals": {
+        "SP": false,
+        "_": false,
+        "_spPageContextInfo": false,
+        "Microsoft": false,
+        "expect": true
+    }
+}

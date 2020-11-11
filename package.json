@@ -1,0 +1,49 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "engines": {
+    "node": "13.10.5"
+  },
+  "description": "Crossover unit test assessment",
+  "main": "src/weather.js",
+  "scripts": {
+    "lint": "eslint spec",
+    "lint:fix": "eslint --fix spec",
+    "test": "jest",
+    "test:cover": "jest --coverage",
+    "test:mutation": "stryker run",
+    "zip": "pack-zip",
+    "submit": "git init && npm run test:cover && npm run test:mutation && npm run zip"
+  },
+  "keywords": [
+    "crossover",
+    "assessment"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "jquery": "^3.4.1",
+    "moment": "^2.17.1",
+    "moment-timezone": "^0.5.25",
+    "node-fetch": "^1.7.1",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^2.5.0",
+    "@stryker-mutator/html-reporter": "^2.5.0",
+    "@stryker-mutator/javascript-mutator": "^2.5.0",
+    "@stryker-mutator/jest-runner": "^2.5.0",
+    "angular-mocks": "^1.7.9",
+    "eslint": "^5.3.0",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^24.0.0",
+    "jest-cli": "^24.0.0",
+    "pack-zip": "^0.2.2",
+    "stryker-cli": "^1.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*.js"
+    ]
+  }
+}
